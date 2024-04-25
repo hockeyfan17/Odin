@@ -54,6 +54,9 @@ object GhostBlocks : Module(
             for (i in enderchests[phase] ?: return@execute) {
                 mc.theWorld?.setBlockState(i, Blocks.ender_chest.defaultState)
             }
+             for (i in fence[phase] ?: return@execute) {
+                mc.theWorld?.setBlockState(i, Blocks.fence.defaultState)
+            }
             for (i in glass[phase] ?: return@execute) {
                 mc.theWorld?.setBlockState(i, Blocks.stained_glass.defaultState)
             }
@@ -88,6 +91,21 @@ object GhostBlocks : Module(
         )
     )
 
+    private val fence = mapOf(
+        1 to arrayOf(
+            BlockPos(91, 166, 41),
+            BlockPos(91, 167, 41),
+            BlockPos(90, 166, 41),
+            BlockPos(90, 167, 41),
+            BlockPos(89, 166, 41),
+            BlockPos(89, 167, 41),
+            BlockPos(88, 166, 41),
+            BlockPos(88, 167, 41),
+            BlockPos(87, 166, 41),
+            BlockPos(87, 167, 41)
+        )
+    )
+    
     private val glass = mapOf(
         1 to arrayOf(
             BlockPos(77, 221, 36),
@@ -172,7 +190,17 @@ object GhostBlocks : Module(
             BlockPos(101, 167, 47),
             BlockPos(101, 166, 47),
             BlockPos(101, 167, 46),
-            BlockPos(101, 166, 46)
+            BlockPos(101, 166, 46),
+            BlockPos(96, 167, 40),
+            BlockPos(96, 167, 41),
+            BlockPos(95, 167, 40),
+            BlockPos(95, 167, 41),
+            BlockPos(97, 167, 40),
+            BlockPos(97, 167, 41),
+            BlockPos(98, 167, 40),
+            BlockPos(98, 167, 41),
+            BlockPos(99, 167, 40),
+            BlockPos(99, 167, 41)
         ),
         3 to arrayOf(
             BlockPos(51, 114, 52),
